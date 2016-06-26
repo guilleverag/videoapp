@@ -18,8 +18,7 @@ var videoApp = angular.module('videoApp', ['ionic', 'ngCordova','videoController
       url: "/home",
       views: {
         'menuContent' :{
-            templateUrl: "templates/home.html",
-            controller: "VideoCtrl"
+            templateUrl: "templates/home.html"
         }
       }
     })
@@ -39,50 +38,6 @@ var videoApp = angular.module('videoApp', ['ionic', 'ngCordova','videoController
         }
       }
     })
-    /*.state('app.contact', {
-      url: "/contact",
-      views: {
-        'menuContent' :{
-            templateUrl: "templates/contact.html"
-        }
-      }
-    })    
-    .state('app.home', {
-      abstract: true,  
-      views: {
-        'menuContent' :{
-            templateUrl: "templates/home.html",
-            controller: 'HomeCtrl'
-        }
-      }
-    })    
-   .state('app.home.map', {
-      url: "/home/map",
-      views: {
-        'map-tab': {
-          templateUrl: "templates/map.html",
-          controller: 'HomeMapCtrl'
-        }
-      }
-    })
-    .state('app.home.result', {
-      url: "/home/result",
-      views: {
-        'result-tab': {
-          templateUrl: "templates/result.html",
-          controller: 'HomeResultCtrl'
-        }
-      }
-    })
-    .state('app.overview', {
-      url: "/overview/:county/:pid",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/overview.html",
-          controller: 'OverviewCtrl'
-        }
-      }
-    })*/
     
   $urlRouterProvider.otherwise("/app/home");
 });
