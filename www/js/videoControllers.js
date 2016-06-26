@@ -4,7 +4,9 @@ var videoControllers = angular.module('videoControllers',[])
     $scope.clip = '';
  
     $scope.captureVideo = function() {
-        $cordovaCapture.captureVideo().then(function(videoData) {
+        var options = { limit: 1, duration: 10 };
+        
+        $cordovaCapture.captureVideo(options).then(function(videoData) {
             videoServices.saveVideo(videoData).success(function(data) {
                 $scope.clip = data;
                 $scope.$apply();
