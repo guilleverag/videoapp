@@ -1,0 +1,31 @@
+<ion-side-menus enable-menu-with-back-views="false">
+        
+    <ion-side-menu-content drag-content="false">
+        <ion-nav-bar class="bar-balanced">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+        
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+            
+            <!--<ion-nav-buttons side="right">
+                <button class="button button-icon button-clear ion-search" ng-click="showSearch()">
+                </button>
+            </ion-nav-buttons>-->
+        </ion-nav-bar>
+        
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content> 
+
+    <ion-side-menu side="left">
+        <ion-content>
+            <ul class="list">
+                <a ui-sref="app.home" class="item" menu-close>Home</a>
+                <a ui-sref="app.records" class="item" menu-close>Records</a>
+                <a ui-sref="app.about" class="item" menu-close>About Us</a>
+            </ul>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

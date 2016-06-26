@@ -1,73 +1,87 @@
-// Ionic Starter App
+var videoApp = angular.module('videoApp', ['ionic', 'ngCordova'])
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
-
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
-    if (window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      cordova.plugins.Keyboard.disableScroll(true);
-
-    }
-    if (window.StatusBar) {
-      // org.apache.cordova.statusbar required
-      StatusBar.styleDefault();
-    }
-  });
+.constant('app_config', {
+    appName: 'Video App',
+    appVersion: 1.0
+    //apiUrl: 'http://52.10.82.93/rewards/api/v1/reward_api.php'
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
+
   $stateProvider
-
     .state('app', {
-    url: '/app',
-    abstract: true,
-    templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
-  })
-
-  .state('app.search', {
-    url: '/search',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html'
-      }
-    }
-  })
-
-  .state('app.browse', {
-      url: '/browse',
+      url: "/app",
+      abstract: true,
+      templateUrl: "templates/event-menu.html"
+    })
+    .state('app.home', {
+      url: "/home",
       views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
+        'menuContent' :{
+            templateUrl: "templates/home.html"
         }
       }
     })
-    .state('app.playlists', {
-      url: '/playlists',
+    .state('app.about', {
+      url: "/about",
       views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
+        'menuContent' :{
+            templateUrl: "templates/about.html"
         }
       }
     })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+    .state('app.records', {
+      url: "/records",
+      views: {
+        'menuContent' :{
+            templateUrl: "templates/records.html"
+        }
       }
-    }
-  });
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+    })
+    /*.state('app.contact', {
+      url: "/contact",
+      views: {
+        'menuContent' :{
+            templateUrl: "templates/contact.html"
+        }
+      }
+    })    
+    .state('app.home', {
+      abstract: true,  
+      views: {
+        'menuContent' :{
+            templateUrl: "templates/home.html",
+            controller: 'HomeCtrl'
+        }
+      }
+    })    
+   .state('app.home.map', {
+      url: "/home/map",
+      views: {
+        'map-tab': {
+          templateUrl: "templates/map.html",
+          controller: 'HomeMapCtrl'
+        }
+      }
+    })
+    .state('app.home.result', {
+      url: "/home/result",
+      views: {
+        'result-tab': {
+          templateUrl: "templates/result.html",
+          controller: 'HomeResultCtrl'
+        }
+      }
+    })
+    .state('app.overview', {
+      url: "/overview/:county/:pid",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/overview.html",
+          controller: 'OverviewCtrl'
+        }
+      }
+    })*/
+    
+  $urlRouterProvider.otherwise("/app/home");
 });

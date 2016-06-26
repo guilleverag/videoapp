@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-photokandy-video-thumbnail": {
             "PACKAGE_NAME": "com.ionicframework.videoapp131309"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.ionicframework.videoapp131309"
         }
     },
     "dependent_plugins": {
