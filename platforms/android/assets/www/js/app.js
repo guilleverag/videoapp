@@ -1,4 +1,4 @@
-var videoApp = angular.module('videoApp', ['ionic', 'ngCordova'])
+var videoApp = angular.module('videoApp', ['ionic', 'ngCordova','videoControllers','videoFactory'])
 
 .constant('app_config', {
     appName: 'Video App',
@@ -18,7 +18,8 @@ var videoApp = angular.module('videoApp', ['ionic', 'ngCordova'])
       url: "/home",
       views: {
         'menuContent' :{
-            templateUrl: "templates/home.html"
+            templateUrl: "templates/home.html",
+            controller: "VideoCtrl"
         }
       }
     })

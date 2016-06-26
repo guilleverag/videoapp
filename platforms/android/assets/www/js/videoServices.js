@@ -1,5 +1,5 @@
 angular.module('videoFactory', [])
-    .factory('videoServices', function($http, $httpParamSerializer){
+    .factory('videoServices', function($http, $q, $httpParamSerializer){
         var deferred = $q.defer();
         var promise = deferred.promise;
          

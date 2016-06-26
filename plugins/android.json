@@ -12,14 +12,19 @@
         },
         "cordova-plugin-media-capture": {
             "PACKAGE_NAME": "com.ionicframework.videoapp131309"
-        }
-    },
-    "dependent_plugins": {
-        "cordova-plugin-compat": {
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.ionicframework.videoapp131309"
+        },
+        "cordova-plugin-media": {
             "PACKAGE_NAME": "com.ionicframework.videoapp131309"
         },
         "cordova-plugin-file": {
             "PACKAGE_NAME": "com.ionicframework.videoapp131309"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.videoapp131309"
         }
-    }
+    },
+    "dependent_plugins": {}
 }
