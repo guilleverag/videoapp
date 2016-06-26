@@ -24,6 +24,9 @@
         },
         "cordova-plugin-compat": {
             "PACKAGE_NAME": "com.ionicframework.videoapp131309"
+        },
+        "nl.x-services.plugins.videocaptureplus": {
+            "PACKAGE_NAME": "com.ionicframework.videoapp131309"
         }
     },
     "dependent_plugins": {}

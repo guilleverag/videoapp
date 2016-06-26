@@ -232,6 +232,13 @@ module.exports = [
         "clobbers": [
             "window.Media"
         ]
+    },
+    {
+        "file": "plugins/nl.x-services.plugins.videocaptureplus/www/VideoCapturePlus.js",
+        "id": "nl.x-services.plugins.videocaptureplus.VideoCapturePlus",
+        "clobbers": [
+            "window.plugins.videocaptureplus"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -242,7 +249,8 @@ module.exports.metadata =
     "cordova-plugin-photokandy-video-thumbnail": "2.1.0",
     "cordova-plugin-media-capture": "1.3.0",
     "cordova-plugin-geolocation": "2.2.0",
-    "cordova-plugin-media": "2.3.0"
+    "cordova-plugin-media": "2.3.0",
+    "nl.x-services.plugins.videocaptureplus": "1.3.0"
 };
 // BOTTOM OF METADATA
 });

@@ -6,14 +6,32 @@ var videoControllers = angular.module('videoControllers',[])
     $scope.captureVideo = function() {
         var options = { limit: 1, duration: 10 };
         
-        $cordovaCapture.captureVideo(options).then(function(videoData) {
+        window.plugins.videocaptureplus.captureVideo(
+            function(videoData) {
+                videoServices.saveVideo(videoData).success(function(data) {
+                    $scope.video = data;
+                    $scope.$apply();
+                });
+            }, // your success callback
+            function(data){
+               console.log('ERROR: ' + data); 
+            },   
+            {
+                limit: 1, // the nr of videos to record, default 1 (on iOS always 1)
+                duration: 10, // max duration in seconds, default 0, which is 'forever'
+                highquality: true, // set to true to override the default low quality setting
+                frontcamera: true
+            }
+        );
+        
+        /*$cordovaCapture.captureVideo(options).then(function(videoData) {
             videoServices.saveVideo(videoData).success(function(data) {
                 $scope.video = data;
                 $scope.$apply();
             }).error(function(data) {
                 console.log('ERROR: ' + data);
             });
-        });
+        });*/
     };
     
     $scope.urlForVideoThumb = function(videoUrl) {
