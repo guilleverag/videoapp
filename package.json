@@ -15,7 +15,5 @@
     "shelljs": "^0.3.0"
   },
   "cordovaPlugins": [],
-  "cordovaPlatforms": [
-    "android"
-  ]
+  "cordovaPlatforms": []
 }

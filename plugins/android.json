@@ -7,10 +7,10 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-photokandy-video-thumbnail": {
+        "cordova-plugin-compat": {
             "PACKAGE_NAME": "com.ionicframework.videoapp131309"
         },
-        "cordova-plugin-media-capture": {
+        "cordova-plugin-file": {
             "PACKAGE_NAME": "com.ionicframework.videoapp131309"
         },
         "cordova-plugin-geolocation": {
@@ -19,10 +19,10 @@
         "cordova-plugin-media": {
             "PACKAGE_NAME": "com.ionicframework.videoapp131309"
         },
-        "cordova-plugin-file": {
+        "cordova-plugin-media-capture": {
             "PACKAGE_NAME": "com.ionicframework.videoapp131309"
         },
-        "cordova-plugin-compat": {
+        "cordova-plugin-photokandy-video-thumbnail": {
             "PACKAGE_NAME": "com.ionicframework.videoapp131309"
         }
     },
