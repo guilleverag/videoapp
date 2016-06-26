@@ -27,6 +27,9 @@
         },
         "nl.x-services.plugins.videocaptureplus": {
             "PACKAGE_NAME": "com.ionicframework.videoapp131309"
+        },
+        "com.dawsonloudon.videoplayer": {
+            "PACKAGE_NAME": "com.ionicframework.videoapp131309"
         }
     },
     "dependent_plugins": {}

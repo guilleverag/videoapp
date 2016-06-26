@@ -17,6 +17,9 @@
     <feature name="VideoCapturePlus">
         <param name="android-package" value="nl.xservices.plugins.videocaptureplus.VideoCapturePlus" />
     </feature>
+    <feature name="VideoPlayer">
+        <param name="android-package" value="com.dawsonloudon.videoplayer.VideoPlayer" />
+    </feature>
     <feature name="PKVideoThumbnail">
         <param name="android-package" value="com.photokandy.PKVideoThumbnail.PKVideoThumbnail" />
     </feature>

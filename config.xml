@@ -47,4 +47,5 @@
     <plugin name="cordova-plugin-file" spec="~4.2.0" />
     <plugin name="cordova-plugin-compat" spec="~1.0.0" />
     <plugin name="nl.x-services.plugins.videocaptureplus" spec="https://github.com/EddyVerbruggen/VideoCapturePlus-PhoneGap-Plugin.git" />
+    <plugin name="com.dawsonloudon.videoplayer" spec="https://github.com/dawsonloudon/VideoPlayer.git" />
 </widget>

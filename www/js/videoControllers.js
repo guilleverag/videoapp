@@ -44,19 +44,21 @@ var videoControllers = angular.module('videoControllers',[])
     $scope.showVideo = function(video) {
         $scope.videoSrc  = video;
         
-		$ionicModal.fromTemplateUrl('templates/video.html', {
+        VideoPlayer.play(video);
+        
+		/*$ionicModal.fromTemplateUrl('templates/video.html', {
 			scope: $scope,
 			animation: 'slide-in-up'
 		}).then(function(modal) {
 			$scope.modal = modal;
 			$scope.modal.show();
-		});
+		});*/
 	}
  
-	// Close the modal
+	/*// Close the modal
 	$scope.closeModal = function() {
 		$scope.modal.hide();
 		$scope.modal.remove()
-	};
+	};*/
  
 });
