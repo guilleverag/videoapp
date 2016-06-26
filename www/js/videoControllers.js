@@ -17,7 +17,7 @@ var videoControllers = angular.module('videoControllers',[])
     };
     
     $scope.urlForVideoThumb = function(videoUrl) {
-        var name = videoUrl.substr(clipUrl.lastIndexOf('/') + 1);
+        var name = videoUrl.substr(videoUrl.lastIndexOf('/') + 1);
         var trueOrigin = cordova.file.dataDirectory + name;
         var sliced = trueOrigin.slice(0, -4);
         return sliced + '.png';
