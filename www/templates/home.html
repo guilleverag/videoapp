@@ -1,4 +1,14 @@
 <ion-view view-title="Video App">
+    <ion-content>
+        <div class="list">
+            <div class="item item-divider">
+                <i class="ion-videocamera"></i>
+                Last Records
+            </div>
+            <img ng-src="{{urlForVideoThumb(video)}}" ng-click="showVideo(video)" style="height: 250px; width: 150px;"/>
+        </div>    
+    </ion-content>
+    
     <ion-footer-bar align-title="center" class="bar bar-light">
         <div class="button-bar">
             <button class="button button-positive" ng-click="captureVideo()">
