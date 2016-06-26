@@ -18,8 +18,7 @@ var videoApp = angular.module('videoApp', ['ionic', 'ngCordova','videoController
       url: "/home",
       views: {
         'menuContent' :{
-            templateUrl: "templates/home.html",
-            controller: "VideoCtrl"
+            templateUrl: "templates/home.html"
         }
       }
     })
