@@ -77,7 +77,7 @@ angular.module('videoFactory', [])
             // Gets the videoData and calls the first service function
             // with the local URL of the video and returns the promise
             saveVideo: function(data) {
-                createFileEntry(data[0].localURL);
+                createFileEntry(data);
                 return promise;
             }
         }
