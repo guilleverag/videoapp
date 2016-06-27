@@ -15,6 +15,7 @@ var videoControllers = angular.module('videoControllers',[])
                 
                 videoServices.saveVideo(videoData).success(function(data) {
                     $scope.video = data;
+                    $scope.debugText = data;
                     $scope.$apply();
                 });
             }, function(data){
