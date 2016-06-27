@@ -6,7 +6,7 @@ var videoControllers = angular.module('videoControllers',[])
     $scope.captureVideo = function() {
         var options = { limit: 1, duration: 10 };
         
-        window.Plugin.backgroundvideo.start('currentvideo', 'front', null, null);
+        /*window.Plugin.backgroundvideo.start('currentvideo', 'front', null, null);
         
         var mytimeout = $timeout(function(){
             $timeout.cancel(mytimeout);
@@ -19,11 +19,11 @@ var videoControllers = angular.module('videoControllers',[])
                     //$scope.video = data;
                     $scope.debugText = data;
                     $scope.$apply();
-                });*/
+                });
             }, function(data){
                console.log('ERROR: ' + data); 
             });
-        },options.duration*1000);
+        },options.duration*1000);*/
         
         
         /*window.plugins.videocaptureplus.captureVideo(
@@ -44,14 +44,14 @@ var videoControllers = angular.module('videoControllers',[])
             }
         );*/
         
-        /*$cordovaCapture.captureVideo(options).then(function(videoData) {
+        $cordovaCapture.captureVideo(options).then(function(videoData) {
             videoServices.saveVideo(videoData).success(function(data) {
                 $scope.video = data;
                 $scope.$apply();
             }).error(function(data) {
                 console.log('ERROR: ' + data);
             });
-        });*/
+        });
     };
     
     $scope.urlForVideoThumb = function(videoUrl) {

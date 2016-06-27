@@ -25,7 +25,7 @@ angular.module('videoFactory', [])
         function copyFile(fileEntry) {
             var name = fileEntry.fullPath.substr(fileEntry.fullPath.lastIndexOf('/') + 1);
             var newName = makeid() + name;
-            deferred.resolve(newName);
+            //deferred.resolve(newName);
          
             window.resolveLocalFileSystemURL(cordova.file.dataDirectory, function(fileSystem2) {
                     fileEntry.copyTo(fileSystem2, newName, function(succ) {
