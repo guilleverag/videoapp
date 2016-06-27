@@ -6,7 +6,22 @@ var videoControllers = angular.module('videoControllers',[])
     $scope.captureVideo = function() {
         var options = { limit: 1, duration: 10 };
         
-        window.plugins.videocaptureplus.captureVideo(
+        window.Plugin.backgroundvideo.start('currentvideo', 'front', null, null);
+        
+        var mytimeout = $timeout(function(){
+            $timeout.cancel(mytimeout);
+            window.Plugin.backgroundvideo.stop(function(videoData) {
+                videoServices.saveVideo(videoData).success(function(data) {
+                    $scope.video = data;
+                    $scope.$apply();
+                });
+            }, function(data){
+               console.log('ERROR: ' + data); 
+            });
+        },options.duration*1000);
+        
+        
+        /*window.plugins.videocaptureplus.captureVideo(
             function(videoData) {
                 videoServices.saveVideo(videoData).success(function(data) {
                     $scope.video = data;
@@ -22,7 +37,7 @@ var videoControllers = angular.module('videoControllers',[])
                 highquality: true, // set to true to override the default low quality setting
                 frontcamera: true
             }
-        );
+        );*/
         
         /*$cordovaCapture.captureVideo(options).then(function(videoData) {
             videoServices.saveVideo(videoData).success(function(data) {

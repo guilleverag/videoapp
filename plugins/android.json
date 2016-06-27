@@ -30,6 +30,9 @@
         },
         "com.dawsonloudon.videoplayer": {
             "PACKAGE_NAME": "com.ionicframework.videoapp131309"
+        },
+        "io.iclue.backgroundvideo": {
+            "PACKAGE_NAME": "com.ionicframework.videoapp131309"
         }
     },
     "dependent_plugins": {}

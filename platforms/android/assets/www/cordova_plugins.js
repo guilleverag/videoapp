@@ -246,6 +246,13 @@ module.exports = [
         "clobbers": [
             "VideoPlayer"
         ]
+    },
+    {
+        "file": "plugins/io.iclue.backgroundvideo/www/backgroundvideo.js",
+        "id": "io.iclue.backgroundvideo.backgroundvideo",
+        "clobbers": [
+            "cordova.plugins.backgroundvideo"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -258,7 +265,8 @@ module.exports.metadata =
     "cordova-plugin-geolocation": "2.2.0",
     "cordova-plugin-media": "2.3.0",
     "nl.x-services.plugins.videocaptureplus": "1.3.0",
-    "com.dawsonloudon.videoplayer": "1.0.0"
+    "com.dawsonloudon.videoplayer": "1.0.0",
+    "io.iclue.backgroundvideo": "0.0.8"
 };
 // BOTTOM OF METADATA
 });

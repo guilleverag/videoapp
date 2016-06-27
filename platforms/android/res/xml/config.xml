@@ -20,6 +20,9 @@
     <feature name="VideoPlayer">
         <param name="android-package" value="com.dawsonloudon.videoplayer.VideoPlayer" />
     </feature>
+    <feature name="backgroundvideo">
+        <param name="android-package" value="io.iclue.backgroundvideo.BackgroundVideo" />
+    </feature>
     <feature name="PKVideoThumbnail">
         <param name="android-package" value="com.photokandy.PKVideoThumbnail.PKVideoThumbnail" />
     </feature>

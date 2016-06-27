@@ -31,6 +31,10 @@
                         {
                             "xml": "<feature name=\"VideoPlayer\"><param name=\"android-package\" value=\"com.dawsonloudon.videoplayer.VideoPlayer\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"backgroundvideo\"><param name=\"android-package\" value=\"io.iclue.backgroundvideo.BackgroundVideo\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -40,11 +44,11 @@
                     "/*": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-                            "count": 5
+                            "count": 6
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.RECORD_AUDIO\" />",
-                            "count": 2
+                            "count": 3
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.RECORD_VIDEO\" />",
@@ -68,6 +72,22 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-feature android:name=\"android.hardware.camera\" android:required=\"false\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-feature android:name=\"android.hardware.camera.front\" android:required=\"false\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-feature android:name=\"android.hardware.camera.autofocus\" android:required=\"false\" />",
                             "count": 1
                         }
                     ]
@@ -108,6 +128,9 @@
             "PACKAGE_NAME": "com.ionicframework.videoapp131309"
         },
         "com.dawsonloudon.videoplayer": {
+            "PACKAGE_NAME": "com.ionicframework.videoapp131309"
+        },
+        "io.iclue.backgroundvideo": {
             "PACKAGE_NAME": "com.ionicframework.videoapp131309"
         }
     },
@@ -359,6 +382,13 @@
             "clobbers": [
                 "VideoPlayer"
             ]
+        },
+        {
+            "file": "plugins/io.iclue.backgroundvideo/www/backgroundvideo.js",
+            "id": "io.iclue.backgroundvideo.backgroundvideo",
+            "clobbers": [
+                "cordova.plugins.backgroundvideo"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -369,6 +399,7 @@
         "cordova-plugin-geolocation": "2.2.0",
         "cordova-plugin-media": "2.3.0",
         "nl.x-services.plugins.videocaptureplus": "1.3.0",
-        "com.dawsonloudon.videoplayer": "1.0.0"
+        "com.dawsonloudon.videoplayer": "1.0.0",
+        "io.iclue.backgroundvideo": "0.0.8"
     }
 }
