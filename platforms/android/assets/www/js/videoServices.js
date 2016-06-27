@@ -15,6 +15,7 @@ angular.module('videoFactory', [])
         // Resolve the URL to the local file
         // Start the copy process
         function createFileEntry(fileURI) {
+            return fileURI;
             window.resolveLocalFileSystemURL(fileURI, function(entry) {
                 return entry.fullPath;
                 
