@@ -11,7 +11,7 @@ var videoControllers = angular.module('videoControllers',[])
         var mytimeout = $timeout(function(){
             $timeout.cancel(mytimeout);
             window.Plugin.backgroundvideo.stop(function(videoData) {
-                $scope.debugText = videoData;
+                //$scope.debugText = videoData;
                 
                 videoServices.saveVideo(videoData).success(function(data) {
                     $scope.video = data;
