@@ -1,6 +1,6 @@
 var videoControllers = angular.module('videoControllers',[])
 
-.controller("VideoCtrl", function($scope, $ionicModal, $cordovaCapture, videoServices) {
+.controller("VideoCtrl", function($scope, $ionicModal, $timeout, $cordovaCapture, videoServices) {
     $scope.video = '';
  
     $scope.captureVideo = function() {
