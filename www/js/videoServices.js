@@ -15,9 +15,9 @@ angular.module('videoFactory', [])
         // Resolve the URL to the local file
         // Start the copy process
         function createFileEntry(fileURI) {
-            return fileURI;
+            deferred.resolve(fileURI);
             window.resolveLocalFileSystemURL(fileURI, function(entry) {
-                return entry.fullPath;
+                deferred.resolve(entry.fullPath);
                 
                 //return copyFile(entry);
             }, fail);
@@ -61,7 +61,7 @@ angular.module('videoFactory', [])
         // Rejects the promise with an Error
         function fail(error) {
             console.log('FAIL: ' + error.code);
-            deferred.reject('ERROR');
+            deferred.resolve('ERROR');
         }
          
         // Function to make a unique filename
