@@ -15,15 +15,22 @@ angular.module('videoFactory', [])
         // Resolve the URL to the local file
         // Start the copy process
         function createFileEntry(fileURI) {
-            window.resolveLocalFileSystemURL(fileURI, function(entry) {
+            /*window.resolveLocalFileSystemURL(fileURI, function(entry) {
                 return copyFile(entry);
-            }, fail);
+            }, fail);*/
+            var name = fileURI.substr(fileURI.lastIndexOf('/') + 1);
+            var newName = makeid() + name;
+
+            $cordovaFile.createFile(cordova.file.dataDirectory,newName,true).then(function(succ){
+                return onCopySuccess(succ);
+            })
+
         }
          
         // Create a unique name for the videofile
         // Copy the recorded video to the app dir
         function copyFile(fileEntry) {
-            var name = fileEntry.fullPath.substr(fileEntry.fullPath.lastIndexOf('/') + 1);
+            var name = fileEntry.substr(fileEntry.lastIndexOf('/') + 1);
             var newName = makeid() + name;
             //deferred.resolve(newName);
          
